@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bapu no Rotlo - Take Away</title>
+  <link rel="stylesheet" href="takeaway.css">
+</head>
+<body>
+
+  <header>
+    <h1>🥡 Take Away Order</h1>
+  </header>
+
+  <section class="options-box" style="max-width:600px; margin:30px auto;">
+    <form id="orderForm">
+      <label>
+        <input type="checkbox" name="menu" value="Rotlo" data-price="20">
+        <span>Rotlo (₹20)</span>
+        <input type="number" name="qty" value="1" min="1">
+        <span class="item-total">₹0</span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="menu" value="Sev Tameta" data-price="80">
+        <span>Sev Tameta (₹80)</span>
+        <input type="number" name="qty" value="1" min="1">
+        <span class="item-total">₹0</span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="menu" value="Gujarati Thali" data-price="150">
+        <span>Gujarati Thali (₹150)</span>
+        <input type="number" name="qty" value="1" min="1">
+        <span class="item-total">₹0</span>
+      </label>
+    </form>
+
+    <div id="orderSummary" style="margin-top:15px; font-weight:bold; text-align:right;">
+      Total: ₹0
+    </div>
+
+    <div style="margin-top:20px; text-align:center;">
+      <button onclick="sendOrder()" style="padding:10px 20px; background:#25D366; color:white; border:none; border-radius:8px; cursor:pointer;">Send via WhatsApp</button>
+    </div>
+  </section>
+
+  <script src="menu.js"></script>
+  <script>
+    // updateTotals() should still work as in menu.js
+  </script>
+</body>
+</html>

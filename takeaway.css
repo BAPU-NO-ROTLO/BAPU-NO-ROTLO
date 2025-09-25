@@ -1,0 +1,117 @@
+/* ================= RESET + GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fafafa;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #f15a24, #f98c5c);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ================= ORDER FORM ================= */
+.options-box {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: #fff8f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#orderForm label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#orderForm label:hover {
+  background: #f3f3f3;
+}
+
+#orderForm input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+#orderForm input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.item-total {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* ================= ORDER SUMMARY ================= */
+#orderSummary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+  margin-top: 15px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.send-btn {
+  background: #25D366;
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  #orderForm label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #orderForm input[type="number"] {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  .item-total {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
