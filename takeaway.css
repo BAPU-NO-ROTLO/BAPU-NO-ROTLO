@@ -1,117 +1,311 @@
-/* ================= RESET + GLOBAL ================= */
-* {
-  margin: 0;
-  padding: 0;
+/* General Reset and Box-sizing */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif; /* similar clean modern font */
+  background: #fff7f0;
+  color: #4a3a29;
+  margin: 0;
+  padding: 0 10px 40px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+header h1 {
   text-align: center;
-  background: #fafafa;
-}
-
-/* ================= HEADER ================= */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 2rem;
   padding: 20px 0;
-  background: linear-gradient(135deg, #f15a24, #f98c5c);
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #a44f17;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(164, 79, 23, 0.3);
 }
 
-/* ================= ORDER FORM ================= */
+/* Container */
 .options-box {
-  margin: 30px auto;
-  padding: 20px;
   max-width: 600px;
-  background: #fff8f5;
+  margin: 0 auto;
+  background: #fff2e8;
+  padding: 20px 25px 40px;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: left;
+  box-shadow: 0 6px 18px rgba(164, 79, 23, 0.15);
 }
 
-#orderForm label {
+/* Menu Section */
+.menu-section {
+  margin-bottom: 25px;
+}
+
+/* Collapsible Headers */
+.collapsible {
+  background-color: #e6c4a0;
+  color: #633a0a;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: inset 0 0 6px #c99b5b;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fafafa;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-#orderForm label:hover {
-  background: #f3f3f3;
+.collapsible:hover {
+  background-color: #c99b5b;
+  color: #3b1f00;
 }
 
-#orderForm input[type="checkbox"] {
-  margin-right: 8px;
-}
-
-#orderForm input[type="number"] {
-  width: 60px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 0.9rem;
-  margin-left: 10px;
-}
-
-.item-total {
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-/* ================= ORDER SUMMARY ================= */
-#orderSummary {
-  font-weight: bold;
+/* Arrow icon for collapsible */
+.collapsible::after {
+  content: '▼';
   font-size: 1.1rem;
-  text-align: right;
-  margin-top: 15px;
+  color: #633a0a;
+  transition: transform 0.3s ease;
+  margin-left: 12px;
 }
 
-/* ================= BUTTON ================= */
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+.collapsible.active::after {
+  transform: rotate(180deg);
+}
+
+/* Content inside collapsible */
+.content {
+  display: none;
+  background: #f9ede3;
+  border-radius: 0 0 12px 12px;
+  padding: 15px 20px;
+  box-shadow: inset 0 2px 4px rgba(164, 79, 23, 0.1);
+}
+
+/* Show content */
+.content.show {
+  display: block;
+}
+
+/* Form labels styling */
+.content label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1.5px solid #d8b88b;
+  box-shadow: 0 3px 6px rgba(164, 79, 23, 0.07);
   font-weight: 600;
+  color: #5b3e1a;
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  transition: background-color 0.25s ease;
+}
+
+.content label:hover {
+  background-color: #fde8cf;
+}
+
+/* Checkbox styles */
+.content input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 14px;
+  accent-color: #a44f17;
+  cursor: pointer;
+}
+
+/* Quantity input */
+.content input[type="number"] {
+  width: 60px;
+  border: 1.5px solid #d8b88b;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-weight: 600;
+  text-align: center;
+  color: #4a3a29;
+  cursor: not-allowed;
+  background-color: #f3e1c3;
+  transition: border-color 0.3s ease;
+}
+
+.content input[type="number"]:enabled {
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #a44f17;
+}
+
+.content input[type="number"]:focus:enabled {
+  outline: none;
+  border-color: #733900;
+  box-shadow: 0 0 5px #a44f17;
+}
+
+/* Price span */
+.item-total {
+  margin-left: 15px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #7a532c;
+  min-width: 75px;
+  text-align: right;
+}
+
+/* Multi-option items inside Chula no Kamaal */
+.multi-option-item {
+  margin-bottom: 20px;
+}
+
+/* Main label inside multi-option */
+.main-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #7a532c;
+}
+
+/* Radio options container */
+.radio-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/* Radio label */
+.radio-options label {
+  flex: 1;
+  background: #fff2e8;
+  border: 1.5px solid #d8b88b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6a4c24;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.radio-options label:hover {
+  background-color: #fde8cf;
+  border-color: #a44f17;
+}
+
+/* Radio input */
+.radio-options input[type="radio"] {
+  cursor: pointer;
+  accent-color: #a44f17;
+}
+
+/* Quantity input inside multi-option */
+.multi-option-item input[type="number"] {
+  width: 60px;
+  border: 1.5px solid #d8b88b;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-weight: 600;
+  text-align: center;
+  color: #4a3a29;
+  cursor: not-allowed;
+  background-color: #f3e1c3;
+  transition: border-color 0.3s ease;
+}
+
+.multi-option-item input[type="number"]:enabled {
+  cursor: pointer;
+  background-color: #fff;
+  border-color: #a44f17;
+}
+
+.multi-option-item input[type="number"]:focus:enabled {
+  outline: none;
+  border-color: #733900;
+  box-shadow: 0 0 5px #a44f17;
+}
+
+/* Price span inside multi-option */
+.multi-option-item .item-total {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #7a532c;
+  min-width: 75px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Order summary */
+#orderSummary {
+  background-color: #a44f17;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(164, 79, 23, 0.5);
+}
+
+/* WhatsApp button */
+button {
+  background-color: #a44f17;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(164, 79, 23, 0.6);
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 button:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background-color: #733900;
 }
 
-.send-btn {
-  background: #25D366;
-  color: #fff;
-}
+/* Responsive for smaller devices */
+@media (max-width: 480px) {
+  .options-box {
+    padding: 15px 15px 30px;
+  }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 600px) {
-  #orderForm label {
+  .collapsible {
+    font-size: 1.2rem;
+    padding: 12px 16px;
+  }
+
+  .content label {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
   }
-  #orderForm input[type="number"] {
-    margin-left: 0;
-    margin-top: 5px;
+
+  .content input[type="number"] {
+    width: 100%;
   }
-  .item-total {
-    margin-left: 0;
-    margin-top: 5px;
+
+  .radio-options {
+    flex-direction: column;
+  }
+
+  .radio-options label {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
   }
 }

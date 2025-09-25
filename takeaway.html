@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bapu no Rotlo - Take Away</title>
-  <link rel="stylesheet" href="takeaway.css">
+  <link rel="stylesheet" href="takeaway.css" />
 </head>
 <body>
 
@@ -12,97 +12,187 @@
     <h1>🥡 Take Away Order</h1>
   </header>
 
-  <section class="options-box" style="max-width:600px; margin:30px auto;">
+  <section class="options-box">
+
     <form id="orderForm">
 
-      <!-- Kathiyawadi Starter -->
-      <h2>KATHIYAWADI STARTER</h2>
-      <label><input type="checkbox" data-price="150"> Bapu Sp. Vagharelo Rotlo (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Bajri Rotla ka Churma (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Bhakhri ka Churma (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="150"> Vagharili Rotli (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+      <!-- KATHIYAWADI STARTER -->
+      <div class="menu-section">
+        <h2 class="collapsible">KATHIYAWADI STARTER</h2>
+        <div class="content">
+          <label><input type="checkbox" data-price="150"> Bapu Sp. Vagharelo Rotlo (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Bajri Rotla ka Churma (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Bhakhri ka Churma (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="150"> Vagharili Rotli (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+        </div>
+      </div>
 
-      <!-- Kathiyawadi Odkar -->
-      <h2>KATHIYAWADI ODKAR</h2>
-      <label><input type="checkbox" data-price="160"> Tuver Totha (₹160) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Aakhi Dungali (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="150"> Dungali Ganthiya (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Kaju Ganthiya (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="190"> Dudh Kaju Ganthiya (₹190) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Lasan Kali (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Aakhu Lasan (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="180"> Kaju Lasan (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="180"> Rajwadi Dhokli (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="190"> Varaliyu (₹190) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="140"> Dahi Tikhari (₹140) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Lasaniya Bataka (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="160"> Suki Bhaji (₹160) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="180"> Panchratna Dal (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Sev Masala (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="150"> Sev Tameta / Sev Dungali (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Bharela Baigan (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="150"> Chavana nu / Sing Bhajiya nu Shak (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="160"> Papad nu Shak (₹160) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="170"> Lila Marcha nu Shak (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+      <!-- KATHIYAWADI ODKAR -->
+      <div class="menu-section">
+        <h2 class="collapsible">KATHIYAWADI ODKAR</h2>
+        <div class="content">
+          <label><input type="checkbox" data-price="160"> Tuver Totha (₹160) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Aakhi Dungali (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="150"> Dungali Ganthiya (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Kaju Ganthiya (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="190"> Dudh Kaju Ganthiya (₹190) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Lasan Kali (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Aakhu Lasan (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="180"> Kaju Lasan (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="180"> Rajwadi Dhokli (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="190"> Varaliyu (₹190) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="140"> Dahi Tikhari (₹140) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Lasaniya Bataka (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="160"> Suki Bhaji (₹160) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="180"> Panchratna Dal (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Sev Masala (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="150"> Sev Tameta (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="150"> Sev dungali (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Bharela Baigan (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="150"> Chavana nu Shak (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="150"> Sing Bhajiya nu Shak (₹150) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="160"> Papad nu Shak (₹160) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="170"> Lila Marcha nu Shak (₹170) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          </div>
+      </div>
 
-      <!-- Shiyala Ni Moj -->
-      <h2>SHIYALA NI MOJ</h2>
-      <label><input type="checkbox" data-price="250"> Lili Haldar (Ghee) (₹250) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="200"> Baigan Bhadatha (₹200) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="180"> Green Chana (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="220"> Undhiyu (₹220) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="280"> Chapdi Tavo (₹280) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="180"> Mix Veg. (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="190"> Lali Lasan nu Shak (₹190) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+      <!-- SHIYALA NI MOJ -->
+      <div class="menu-section">
+        <h2 class="collapsible">SHIYALA NI MOJ</h2>
+        <div class="content">
+          <label><input type="checkbox" data-price="250"> Lili Haldar (Ghee) (₹250) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="200"> Baigan Bhadatha (₹200) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="180"> Green Chana (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="220"> Undhiyu (₹220) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="280"> Chapdi Tavo (₹280) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="180"> Mix. Veg. (₹180) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+          <label><input type="checkbox" data-price="190"> Lila Lasan nu Shak (₹190) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+        </div>
+      </div>
 
-      <!-- Chula No Kamaal -->
-      <h2>CHULA NO KAMAAL</h2>
-      <label><input type="checkbox" data-price="65"> Panch Dhan Rotlo - Plain (₹65) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="70"> Panch Dhan Rotlo - Ghee (₹70) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="45"> Bajri Rotlo - Plain (₹45) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="50"> Bajri Rotlo - Ghee (₹50) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="55"> Makai / Juvar Rotlo - Plain (₹55) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="60"> Makai / Juvar Rotlo - Ghee (₹60) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="65"> Lasaniyo Rotlo - Plain (₹65) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="70"> Lasaniyo Rotlo - Ghee (₹70) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="35"> Bhakhri / Paratha - Plain (₹35) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="40"> Bhakhri / Paratha - Ghee (₹40) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="22"> Rotali - Plain (₹22) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="25"> Rotali - Ghee (₹25) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+<!-- CHULA NO KAMAAL -->
+<div class="menu-section">
+  <h2 class="collapsible">CHULA NO KAMAAL</h2>
+  <div class="content">
 
-      <!-- Jamvani Sathe Sathe -->
-      <h2>JAMVANI SATHE - SATHE</h2>
-      <label><input type="checkbox" data-price="130"> Panch Dhan Sadi Khichdi (₹130) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="160"> Panch Dhan Masala Khichdi (₹160) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="90"> Kadhi (₹90) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="120"> Rajwadi Kadhi (₹120) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+    <!-- Panch Dhan Rotlo -->
+    <div class="multi-option-item">
+      <label class="main-label">Panch Dhan Rotlo</label>
+      <div class="radio-options">
+        <label><input type="radio" name="panchdhan" data-price="65"> Plain (₹65)</label>
+        <label><input type="radio" name="panchdhan" data-price="70"> Ghee (₹70)</label>
+      </div>
+      <input type="number" value="1" min="1" disabled>
+      <span class="item-total">₹0</span>
+    </div>
 
-      <!-- Hajma Hajam -->
-      <h2>HAJMA HAJAM</h2>
-      <label><input type="checkbox" data-price="50"> Milk (₹50) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="30"> Butter Milk (₹30) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="50"> Dahi ka Ghorava (₹50) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="20"> Gud (₹20) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="40"> Ghee - Gud (₹40) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="40"> Tomato Salad (₹40) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="20"> Roasted Papad (₹20) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox" data-price="40"> Roasted Masala Papad (₹40) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
-      <label><input type="checkbox"> Water Bottle / Cold Drinks (MRP) <input type="number" value="1" min="1"><span class="item-total">₹0</span></label>
+    <!-- Bajri Rotlo -->
+    <div class="multi-option-item">
+      <label class="main-label">Bajri Rotlo</label>
+      <div class="radio-options">
+        <label><input type="radio" name="bajri" data-price="45"> Plain (₹45)</label>
+        <label><input type="radio" name="bajri" data-price="50"> Ghee (₹50)</label>
+      </div>
+      <input type="number" value="1" min="1" disabled>
+      <span class="item-total">₹0</span>
+    </div>
+
+    <!-- Makai Rotlo -->
+    <div class="multi-option-item">
+      <label class="main-label">Makai Rotlo</label>
+      <div class="radio-options">
+        <label><input type="radio" name="makai" data-price="55"> Plain (₹55)</label>
+        <label><input type="radio" name="makai" data-price="60"> Ghee (₹60)</label>
+      </div>
+      <input type="number" value="1" min="1" disabled>
+      <span class="item-total">₹0</span>
+    </div>
+
+    <!-- Juvar Rotlo -->
+    <div class="multi-option-item">
+      <label class="main-label">Juvar Rotlo</label>
+      <div class="radio-options">
+        <label><input type="radio" name="juvar" data-price="55"> Plain (₹55)</label>
+        <label><input type="radio" name="juvar" data-price="60"> Ghee (₹60)</label>
+      </div>
+      <input type="number" value="1" min="1" disabled>
+      <span class="item-total">₹0</span>
+    </div>
+
+    <!-- Lasaniyo Rotlo -->
+    <div class="multi-option-item">
+      <label class="main-label">Lasaniyo Rotlo</label>
+      <div class="radio-options">
+        <label><input type="radio" name="lasaniyo" data-price="65"> Plain (₹65)</label>
+        <label><input type="radio" name="lasaniyo" data-price="70"> Ghee (₹70)</label>
+      </div>
+      <input type="number" value="1" min="1" disabled>
+      <span class="item-total">₹0</span>
+    </div>
+
+    <!-- Bhakhri / Paratha -->
+    <div class="multi-option-item">
+      <label class="main-label">Bhakhri / Paratha</label>
+      <div class="radio-options">
+        <label><input type="radio" name="bhakhri" data-price="35"> Plain (₹35)</label>
+        <label><input type="radio" name="bhakhri" data-price="40"> Ghee (₹40)</label>
+      </div>
+      <input type="number" value="1" min="1" disabled>
+      <span class="item-total">₹0</span>
+    </div>
+
+    <!-- Rotli -->
+    <div class="multi-option-item">
+      <label class="main-label">Rotli</label>
+      <div class="radio-options">
+        <label><input type="radio" name="rotli" data-price="22"> Plain (₹22)</label>
+        <label><input type="radio" name="rotli" data-price="25"> Ghee (₹25)</label>
+      </div>
+      <input type="number" value="1" min="1" disabled>
+      <span class="item-total">₹0</span>
+    </div>
+
+  </div>
+</div>
+
+
+      <!-- JAMVANI SATHE-SATHE -->
+<div class="menu-section">
+  <h2 class="collapsible">JAMVANI SATHE - SATHE</h2>
+  <div class="content">
+    <label><input type="checkbox" data-price="130"> Panch Dhan Sadi Khichdi (₹130) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="160"> Panch Dhan Masala Khichdi (₹160) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="70"> Kadhi (₹70) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="120"> Rajwadi Kadhi (₹120) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+  </div>
+</div>
+
+      <!-- HAJMA HAJAM -->
+<div class="menu-section">
+  <h2 class="collapsible">HAJMA HAJAM</h2>
+  <div class="content">
+    <label><input type="checkbox" data-price="50"> Milk (₹50) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="30"> Butter Milk (₹30) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="50"> Dahi Ka Ghorva (₹50) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="20"> Gud (₹20) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="40"> Ghee-Gud (₹40) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="40"> Tomato Salad (₹40) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+    <label><input type="checkbox" data-price="20"> Roasted Papad (₹20) <input type="number" value="1" min="1" disabled><span class="item-total">₹0</span></label>
+  </div>
+</div>
 
     </form>
 
-    <div id="orderSummary" style="margin-top:15px; font-weight:bold; text-align:right;">
-      Total: ₹0
+    <!-- Order Summary -->
+    <div id="orderSummary">Total: ₹0</div>
+
+    <!-- WhatsApp Button -->
+    <div style="text-align: center;">
+      <button onclick="sendOrder()">Send via WhatsApp</button>
     </div>
 
-    <div style="margin-top:20px; text-align:center;">
-      <button onclick="sendOrder()" style="padding:10px 20px; background:#25D366; color:white; border:none; border-radius:8px; cursor:pointer;">Send via WhatsApp</button>
-    </div>
   </section>
 
   <script src="menu.js"></script>
-  <script>
-    // updateTotals() should still work as in menu.js
-  </script>
 </body>
 </html>
